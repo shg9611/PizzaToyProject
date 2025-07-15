@@ -25,4 +25,13 @@ public class PizzaDto {
                 pizza.getPrice()
         );
     }
+
+    public Pizza toPizza(){
+
+        return new Pizza(
+                this.getId(),
+                this.getName(),
+                this.getPrice()
+        );
+    }
 }

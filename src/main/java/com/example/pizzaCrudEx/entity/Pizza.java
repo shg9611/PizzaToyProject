@@ -1,5 +1,6 @@
 package com.example.pizzaCrudEx.entity;
 
+import com.example.pizzaCrudEx.dto.PizzaDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,4 +23,14 @@ public class Pizza {
 
     @Column
     private String price;
+
+
+    public void patch(PizzaDto dto) {
+        if (dto.getName()!=null){
+            this.name=dto.getName();
+        }
+        if (dto.getPrice()!=null){
+            this.name=dto.getPrice();
+        }
+    }
 }
